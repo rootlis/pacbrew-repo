@@ -19,6 +19,8 @@ prepare() {
 
 build() {
     export PATH="/usr/lib/llvm18/bin":$PATH
+    CFLAGS=${CFLAGS/-fstack-clash-protection/}
+    CXXFLAGS="$CFLAGS"
     make -C sdk
 }
 
