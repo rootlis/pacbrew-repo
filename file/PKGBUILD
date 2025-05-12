@@ -19,9 +19,20 @@ prepare() {
 }
 
 build() {
-    source "${PS5_PAYLOAD_SDK}/toolchain/prospero.sh"
     cd file-$pkgver
 
+    # Build host binary first
+    mkdir host-build
+    pushd host-build
+    ../configure --prefix="$(pwd)/staging" \
+		--enable-static --disable-shared
+    make
+    make install
+    popd
+
+    # Use host binary to cross-build
+    export PATH="$(pwd)/host-build/staging/bin:$PATH"
+    source "${PS5_PAYLOAD_SDK}/toolchain/prospero.sh"
     ./configure --prefix="${PREFIX}" --host=x86_64-pc-freebsd \
 		--enable-static --disable-shared
     ${MAKE}
