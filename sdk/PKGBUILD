@@ -9,7 +9,7 @@ source=("git+$url.git")
 sha256sums=('SKIP')
 groups=('ps5-payload-dev')
 options=(!strip libtool staticlibs)
-makedepends=(clang18 llvm18 lld18 llvm18-libs)
+depends=(clang18 llvm18 lld18)
 
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then
@@ -20,7 +20,6 @@ prepare() {
 build() {
     export PATH="/usr/lib/llvm18/bin":$PATH
     CFLAGS=${CFLAGS/-fstack-clash-protection/}
-    #CXXFLAGS="$CFLAGS"
     make -C sdk
 }
 
