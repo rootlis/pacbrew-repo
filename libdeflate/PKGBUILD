@@ -23,6 +23,7 @@ build() {
     ${CMAKE} -DCMAKE_BUILD_TYPE=Release \
 	     -DLIBDEFLATE_BUILD_STATIC_LIB=YES \
 	     -DLIBDEFLATE_BUILD_SHARED_LIB=NO \
+	     -DCMAKE_C_FLAGS="-march=znver2" \
 	     -B build \
              -S .
     ${MAKE} -C build
