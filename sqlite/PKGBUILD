@@ -8,6 +8,7 @@ url="https://www.sqlite.org/"
 options=(!strip libtool staticlibs)
 source=(https://www.sqlite.org/2024/sqlite-src-3460100.zip)
 sha256sums=('SKIP')
+makedepends=('tcl')
 
 groups=('ps5-payload-dev')
 
@@ -22,7 +23,7 @@ build() {
     cd sqlite-src-3460100
 
     ./configure --prefix="${PREFIX}" --host=x86_64-pc-freebsd \
-		--enable-static --disable-shared
+		--enable-static --disable-shared --disable-tcl
     ${MAKE} sqlite3.h libsqlite3.la
 }
 
