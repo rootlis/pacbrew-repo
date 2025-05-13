@@ -26,7 +26,7 @@ for PKG in ${PKGS[*]} ; do
     pushd $PKG || exit 1
     rm -f *.pkg.tar.gz
     rm -rf src pkg
-    makepkg -c -f || exit 1
-    sudo pacman --noconfirm -U ./ps5-payload-*.pkg.tar.gz || exit 1
+    makepkg --noconfirm -cisr --config ../makepkg.conf -f || exit 1
+    sudo pacman --noconfirm -U ./ps5-payload-*.pkg.tar.* || exit 1
     popd
 done
