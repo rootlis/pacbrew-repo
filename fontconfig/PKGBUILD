@@ -10,7 +10,7 @@ source=("https://www.freedesktop.org/software/fontconfig/release/fontconfig-$pkg
 sha256sums=('SKIP')
 groups=('ps5-payload-dev')
 depends=('ps5-payload-freetype' 'ps5-payload-expat')
-makedepends=('ps5-payload-sdk')
+makedepends=('ps5-payload-sdk' 'gperf')
 
 prepare() {
     export PS5_PAYLOAD_SDK=/opt/ps5-payload-sdk
