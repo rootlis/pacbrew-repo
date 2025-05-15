@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 
 PKGS=(sdk openlibm libcxx fast_float
-      bzip2 zlib xz zstd libarchive libdeflate
-      mbedtls wolfssl
      )
 
 sudo pacman --noconfirm --remove ps5-payload-dev
+mkdir -p repo
 
 for PKG in ${PKGS[*]} ; do
     pushd $PKG || exit 1
