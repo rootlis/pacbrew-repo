@@ -1,0 +1,38 @@
+name: ps5-payload-db
+
+on:
+  push:
+    tags:
+      - '*'
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.ref }}-${{ github.event_name  }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Setup
+      run: |
+        sudo apt update
+        sudo apt install cmake pkg-config meson clang-18 lld-18
+        sudo apt install build-essential autoconf libtool yasm nasm
+        sudo apt install smpq gperf pkgconf libarchive-tools autopoint po4a git curl doxygen
+        sudo apt install makepkg pacman-package-manager python3-mako
+        sudo apt install tcl
+
+    - name: Build Libs
+      run: bash ci-db.sh
+
+    - name: Upload Libs
+      uses: actions/upload-artifact@v4
+      with:
+        name: ps5-payload-db
+        path: ./repo/*
+        if-no-files-found: error
