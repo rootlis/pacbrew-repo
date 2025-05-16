@@ -8,7 +8,7 @@ license=('GPL')
 options=(!strip libtool staticlibs)
 source=("https://github.com/sahlberg/libnfs/archive/libnfs-$pkgver.tar.gz")
 sha256sums=('d945cb4f4c8f82ee1f3640893a168810f794a28e1010bb007ec5add345e9df3e')
-makedepends=('ps5-payload-sdk')
+makedepends=('ps5-payload-sdk' 'git')
 groups=('ps5-payload-dev')
 
 prepare() {

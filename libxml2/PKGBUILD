@@ -10,7 +10,7 @@ source=("https://github.com/GNOME/libxml2/archive/refs/tags/v$pkgver.tar.gz")
 sha256sums=('87d681718760ba42e749a61482d71b34d1d566843e9ade39a73fea92caf8293b')
 groups=('ps5-payload-dev')
 depends=('ps5-payload-xz' 'ps5-payload-zlib')
-makedepends=('ps5-payload-sdk')
+makedepends=('ps5-payload-sdk' 'git')
 
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then

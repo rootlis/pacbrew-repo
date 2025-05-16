@@ -9,7 +9,7 @@ options=(!strip libtool staticlibs)
 source=(https://github.com/libexpat/libexpat/releases/download/R_${pkgver//./_}/expat-$pkgver.tar.bz2)
 sha256sums=('9c7c1b5dcbc3c237c500a8fb1493e14d9582146dd9b42aa8d3ffb856a3b927e0')
 groups=('ps5-payload-dev')
-makedepends=('ps5-payload-sdk')
+makedepends=('ps5-payload-sdk' 'git')
 
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then

@@ -9,7 +9,7 @@ source=("git+https://github.com/ps5-payload-dev/offact.git#branch=master")
 sha256sums=('SKIP')
 groups=('ps5-payload-dev' 'ps5-payload-game')
 options=(!strip libtool staticlibs)
-makedepends=('ps5-payload-sdk' 'ps5-payload-sdl2_ttf' 'ps5-payload-sdl2_mixer')
+makedepends=('ps5-payload-sdk' 'ps5-payload-sdl2_ttf' 'ps5-payload-sdl2_mixer' 'git')
 
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then

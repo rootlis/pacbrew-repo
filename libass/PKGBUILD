@@ -10,7 +10,7 @@ source=("https://github.com/libass/libass/releases/download/$pkgver/libass-$pkgv
 sha256sums=('SKIP')
 depends=('ps5-payload-libfribidi' 'ps5-payload-freetype' 'ps5-payload-harfbuzz'
 	'ps5-payload-fontconfig')
-makedepends=('ps5-payload-sdk')
+makedepends=('ps5-payload-sdk' 'git')
 groups=('ps5-payload-dev')
 
 prepare() {

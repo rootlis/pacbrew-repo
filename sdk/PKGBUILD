@@ -9,7 +9,8 @@ source=("git+$url.git")
 sha256sums=('SKIP')
 groups=('ps5-payload-dev')
 options=(!strip libtool staticlibs)
-depends=(clang18 llvm18 lld18)
+depends=('clang18' 'llvm18' 'lld18' 'cmake' 'python')
+makedepends=('git')
 
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then
