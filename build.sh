@@ -23,7 +23,9 @@ PKGS=(
 	SDL2 SDL2_mixer SDL2_ttf SDL2_image SDL2_net SDL2_gfx
 	imgui lua curl ffmpeg SDL2_kitchensink
 	elfldr shsrv klogsrv ftpsrv gdbsrv websrv
-	offact lakesnes fbneo eduke32 scummvm devilutionx mednafen lbreakouthd
+	offact lakesnes fbneo eduke32 scummvm mednafen
+	#lbreakouthd
+	#devilutionx
 )
 
 mkdir -p repo chroot
