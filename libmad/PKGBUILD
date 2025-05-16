@@ -22,8 +22,8 @@ build() {
     source "${PS5_PAYLOAD_SDK}/toolchain/prospero.sh"
     cd libmad
 
-	     #-DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
     ${CMAKE} -DCMAKE_BUILD_TYPE=Release \
+             -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
 	     -B build \
              -S .
     ${MAKE} -C build
