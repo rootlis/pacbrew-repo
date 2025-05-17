@@ -24,7 +24,7 @@ PKGS=(
 	imgui lua curl ffmpeg SDL2_kitchensink
 	elfldr shsrv klogsrv ftpsrv gdbsrv websrv
 	offact lakesnes fbneo eduke32 scummvm mednafen
-	#lbreakouthd
+	lbreakouthd
 	#devilutionx
 )
 

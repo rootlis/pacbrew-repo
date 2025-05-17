@@ -8,7 +8,8 @@ license=('GPL3')
 options=(!strip libtool staticlibs)
 source=("https://downloads.sourceforge.net/project/lgames/lbreakouthd/lbreakouthd-${pkgver}.tar.gz")
 sha256sums=('SKIP')
-makedepends=('ps5-payload-sdl2_ttf' 'ps5-payload-sdl2_image' 'ps5-payload-sdl2_mixer')
+makedepends=('ps5-payload-sdk' 'ps5-payload-libcxx' 'ps5-payload-libiconv' 'ps5-payload-openlibm'
+             'ps5-payload-sdl2_ttf' 'ps5-payload-sdl2_image' 'ps5-payload-sdl2_mixer')
 groups=('ps5-payload-dev' 'ps5-payload-game')
 
 prepare() {
@@ -22,6 +23,8 @@ prepare() {
     sed -i 's|AC_FUNC_REALLOC||g' configure.ac
     sed -i 's|SDL_RENDERER_ACCELERATED|SDL_RENDERER_SOFTWARE|g' src/sdl.cpp
 
+    echo 'AM_GNU_GETTEXT_VERSION(0.25)' >> configure.ac
+    autopoint -f
     autoreconf -fi
 }
 
