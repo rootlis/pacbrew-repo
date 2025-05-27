@@ -10,4 +10,6 @@ pkg
 *.tgz
 *.zip
 *~
-
+*-build.log
+*-package.log
+*-prepare.log
