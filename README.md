@@ -3,14 +3,14 @@ Build a PS5 package repository you can put into your `pacman.conf`.
 
 ## Purpose of this fork
 1. To output a package repository rather than a zip of all the contents.
-2. To make the packages work on Arch.
+2. To make the packages work on Arch Linux.
 3. To use some of the neat Arch Build System tools.
 
 ## Requirement
-A Pacman installation that can satisfy the non-PS5 dependencies, e.g. `clang-18` for the SDK. I use the standard Arch `[core]` and `[extra]` repositories in my `pacman.conf`.
+A Pacman installation that can satisfy the non-PS5 dependencies, e.g. `clang-18` for the SDK. I use the standard Arch Linux `[core]` and `[extra]` repositories in my `pacman.conf`.
 
 ## Building
-1. Ensure `devtools` package is installed
+1. Ensure `devtools` package is installed.
 
    ```
    # pacman -S devtools
@@ -20,13 +20,6 @@ A Pacman installation that can satisfy the non-PS5 dependencies, e.g. `clang-18`
 
     ```
     $ git clone https://github.com/rootlis/pacbrew-repo.git
-    Cloning into 'pacbrew-repo'...
-    remote: Enumerating objects: 1898, done.
-    remote: Counting objects: 100% (263/263), done.
-    remote: Compressing objects: 100% (153/153), done.
-    remote: Total 1898 (delta 102), reused 172 (delta 50), pack-reused 1635 (from 2)
-    Receiving objects: 100% (1898/1898), 274.60 KiB | 4.90 MiB/s, done.
-    Resolving deltas: 100% (823/823), done.
     $ cd pacbrew-repo
     $ sh build.sh
     ```
@@ -54,3 +47,7 @@ The package repository is now ready.
    ```
    # pacman -S ps5-payload-offact
    ```
+
+## Additional note
+
+`build.sh` creates the `chroot` directory to build the packages, but does not delete it when it's done. For a clean build, delete both the `chroot` and `repo` directories.
