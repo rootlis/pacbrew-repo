@@ -9,6 +9,7 @@ options=(!strip libtool staticlibs)
 source=("git+https://github.com/LuaJIT/LuaJIT.git#commit=f9140a622a0c44a99efb391cc1c2358bc8098ab7")
 sha256sums=('SKIP')
 groups=('ps5-payload-dev')
+makedepends=('git' 'ps5-payload-sdk' 'ps5-payload-openlibm' 'ps5-payload-libcxx')
 
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then
@@ -24,6 +25,8 @@ prepare() {
 
 build() {
     source "${PS5_PAYLOAD_SDK}/toolchain/prospero.sh"
+    # Build wants normal clang in path too
+    export PATH="/usr/lib/llvm18/bin:$PATH"
     cd LuaJIT
 
     ${MAKE} amalg BUILDMODE=static \

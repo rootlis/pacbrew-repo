@@ -21,10 +21,9 @@ PKGS=(
 	libvpx libmpeg2 libtheora
 	enet glm
 	SDL2 SDL2_mixer SDL2_ttf SDL2_image SDL2_net SDL2_gfx
-	imgui lua curl ffmpeg SDL2_kitchensink
+	imgui lua luajit curl ffmpeg SDL2_kitchensink
 	elfldr shsrv klogsrv ftpsrv gdbsrv websrv
-	offact lakesnes fbneo eduke32 scummvm mednafen
-	lbreakouthd
+	offact lakesnes fbneo eduke32 scummvm mednafen lbreakouthd
 	#devilutionx
 )
 
@@ -38,4 +37,3 @@ for pkg in "${PKGS[@]}"; do
 	mv *.pkg.tar.gz ../repo/
 	popd
 done
-sudo rm -rf chroot
