@@ -6,9 +6,6 @@ Build a PS5 package repository you can put into your `pacman.conf`.
 2. To make the packages work on Arch Linux.
 3. To use some of the neat Arch Build System tools.
 
-## Requirement
-A Pacman installation that can satisfy the non-PS5 dependencies, e.g. `clang-18` for the SDK. I use the standard Arch Linux `[core]` and `[extra]` repositories in my `pacman.conf`.
-
 ## Building
 1. Ensure `devtools` package is installed.
 
