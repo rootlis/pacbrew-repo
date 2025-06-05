@@ -18,6 +18,11 @@ prepare() {
     fi
 }
 
+pkgver() {
+    cd LakeSnes
+    git describe --tags --long | sed 's/^[^0-9]*//; s/\([^-]*-g\)/r\1/; s/-/./g'
+}
+
 build() {
     source "${PS5_PAYLOAD_SDK}/toolchain/prospero.sh"
     cd LakeSnes
@@ -28,6 +33,7 @@ package() {
     source "${PS5_PAYLOAD_SDK}/toolchain/prospero.sh"
     cd LakeSnes
 
-    install -Dm755 lakesnes \
-	    "${pkgdir}/${DESTDIR}/${PREFIX}/bin/lakesnes"
+    export DESTDIR="${pkgdir}/${DESTDIR}"
+    export PREFIX="/user/data/homebrew"
+    ${MAKE} -f Makefile.prospero install
 }
