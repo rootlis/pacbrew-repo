@@ -12,4 +12,5 @@ pkg
 *~
 *-build.log
 *-package.log
+*-pkgver.log
 *-prepare.log
