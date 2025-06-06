@@ -1,0 +1,6 @@
+[submodule "stormlib"]
+	path = stormlib
+	url = https://aur.archlinux.org/stormlib
+[submodule "smpq"]
+	path = smpq
+	url = https://aur.archlinux.org/smpq

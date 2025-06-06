@@ -33,6 +33,7 @@ build() {
 	     -DNONET=OFF \
 	     -DBUILD_ASSETS_MPQ=ON \
 	     -DDEVILUTIONX_SYSTEM_SDL_IMAGE=OFF \
+	     -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
 	     -B build \
 	     -S .
     ${MAKE} -C build
