@@ -5,6 +5,7 @@ set -euo pipefail
 # The completed package repository is placed in repo/ directory.
 PKGS=(
 	sdk openlibm libcxx fast_float
+	llvm mesa
 	bzip2 zlib xz zstd libarchive libdeflate
 	libressl
 	libevent libiconv libfribidi libpsl
