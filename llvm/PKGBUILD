@@ -34,7 +34,7 @@ prepare() {
           -DCMAKE_BUILD_TYPE=Release \
           -DLLVM_ENABLE_PROJECTS=""
 
-    make -C host llvm-tblgen
+    make -C host llvm-tblgen -j$(nproc)
 }
 
 build() {
@@ -62,7 +62,7 @@ build() {
 	     -DLLVM_CONFIG_PATH="${PS5_PAYLOAD_SDK}/bin/llvm-config" \
 	     -DLLVM_USE_HOST_TOOLS=TRUE \
 	     -DLLVM_TABLEGEN="${PWD}/host/bin/llvm-tblgen"
-    ${MAKE} -C build
+    ${MAKE} -C build -j$(nproc)
 }
 
 package() {
