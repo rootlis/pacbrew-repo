@@ -9,7 +9,7 @@ source=("https://ftp.osuosl.org/pub/xiph/releases/ogg/libogg-$pkgver.tar.gz")
 sha256sums=('0eb4b4b9420a0f51db142ba3f9c64b333f826532dc0f48c6410ae51f4799b664')
 options=(!strip libtool staticlibs)
 groups=('ps5-payload-dev')
-makedepends=('ps5-payload-sdk')
+makedepends=('ps5-payload-sdk' 'libogg')
 
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then
