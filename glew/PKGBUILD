@@ -10,7 +10,7 @@ source=("https://github.com/nigels-com/glew/releases/download/glew-$pkgver/glew-
 sha256sums=('d4fc82893cfb00109578d0a1a2337fb8ca335b3ceccf97b97e5cc7f08e4353e1')
 groups=('ps5-payload-dev' 'ps5-payload-gl')
 depends=('ps5-payload-mesa')
-makedepends=('ps5-payload-sdk' 'git')
+makedepends=('ps5-payload-sdk' 'git' 'meson')
 
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then
@@ -26,6 +26,7 @@ build() {
     cd glew-$pkgver
 
     ${CMAKE} -DCMAKE_BUILD_TYPE=Release \
+	     -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
 	     -DGLEW_OSMESA=YES \
 	     -DBUILD_UTILS=NO \
 	     -B builddir \
