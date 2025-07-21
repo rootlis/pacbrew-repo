@@ -9,6 +9,7 @@ _commit=464c51a0353c71f08fe45f683d6a97a638d47833
 source=(git+${url}#commit=${_commit})
 sha256sums=(SKIP)
 options=(!strip libtool staticlibs)
+makedepends=('ps5-payload-sdk' 'ps5-payload-libcxx' 'git')
 
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then
@@ -26,6 +27,7 @@ build() {
     cd libyuv
 
     ${CMAKE} -DCMAKE_BUILD_TYPE=Release \
+	     -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
 	     -B build \
 	     -S .
     ${MAKE} -C build yuv
