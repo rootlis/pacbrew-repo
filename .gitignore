@@ -14,3 +14,8 @@ pkg
 *-package.log
 *-pkgver.log
 *-prepare.log
+*-namcap.log
+.SRCINFO
+.BUILDINFO
+.MTREE
+.PKGINFO
