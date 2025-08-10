@@ -8,7 +8,11 @@ license=(custom:BSD)
 options=(!strip libtool staticlibs)
 source=("https://chromium.googlesource.com/webm/libvpx/+archive/v1.14.1.tar.gz")
 sha256sums=('SKIP')
-makedepends=('ps5-payload-sdk' 'ps5-payload-libcxx' 'ps5-payload-openlibm')
+makedepends=(
+	'ps5-payload-libcxx'
+	'ps5-payload-openlibm'
+	'ps5-payload-sdk'
+)
 groups=('ps5-payload-dev')
 
 prepare() {

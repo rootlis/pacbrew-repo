@@ -8,8 +8,13 @@ url="https://github.com/ps5-payload-dev/websrv"
 source=("git+https://github.com/ps5-payload-dev/websrv.git")
 sha256sums=('SKIP')
 groups=('ps5-payload-dev' 'ps5-payload-daemon')
-makedepends=('ps5-payload-sdk' 'ps5-payload-libmicrodns' 'ps5-payload-libsmb2' 'git')
-depends=('ps5-payload-libmicrohttpd')
+makedepends=(
+	'ps5-payload-libmicrodns'
+	'ps5-payload-libmicrohttpd'
+	'ps5-payload-libsmb2'
+	'ps5-payload-sdk'
+	'git'
+)
 options=(!strip libtool staticlibs)
 
 prepare() {

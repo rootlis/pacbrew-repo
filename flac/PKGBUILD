@@ -9,7 +9,11 @@ source=(https://github.com/xiph/flac/releases/download/${pkgver}/flac-${pkgver}.
 sha256sums=('6c58e69cd22348f441b861092b825e591d0b822e106de6eb0ee4d05d27205b70')
 options=(!strip libtool staticlibs)
 groups=('ps5-payload-dev')
-makedepends=('ps5-payload-sdk' 'ps5-payload-libcxx' 'ps5-payload-libogg')
+makedepends=(
+	'ps5-payload-libcxx'
+	'ps5-payload-libogg'
+	'ps5-payload-sdk'
+)
 
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then

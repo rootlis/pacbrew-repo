@@ -8,9 +8,14 @@ license=('custom: ISC')
 options=(!strip libtool staticlibs)
 source=("https://github.com/libass/libass/releases/download/$pkgver/libass-$pkgver.tar.xz")
 sha256sums=('SKIP')
-depends=('ps5-payload-libfribidi' 'ps5-payload-freetype' 'ps5-payload-harfbuzz'
-	'ps5-payload-fontconfig')
-makedepends=('ps5-payload-sdk' 'git')
+makedepends=(
+	'ps5-payload-fontconfig'
+	'ps5-payload-freetype'
+	'ps5-payload-harfbuzz'
+	'ps5-payload-libfribidi'
+	'ps5-payload-sdk'
+	'git'
+)
 groups=('ps5-payload-dev')
 
 prepare() {

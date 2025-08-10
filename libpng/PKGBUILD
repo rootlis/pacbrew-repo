@@ -8,8 +8,10 @@ license=('custom')
 options=(!strip libtool staticlibs)
 source=("https://download.sourceforge.net/libpng/libpng-$pkgver.tar.xz")
 sha256sums=('6a5ca0652392a2d7c9db2ae5b40210843c0bbc081cbd410825ab00cc59f14a6c')
-makedepends=('ps5-payload-sdk')
-depends=('ps5-payload-zlib')
+makedepends=(
+	'ps5-payload-sdk'
+	'ps5-payload-zlib'
+)
 groups=('ps5-payload-dev')
 
 prepare() {

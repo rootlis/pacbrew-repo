@@ -9,8 +9,10 @@ source=("http://downloads.xiph.org/releases/theora/libtheora-$pkgver.tar.bz2")
 sha256sums=('b6ae1ee2fa3d42ac489287d3ec34c5885730b1296f0801ae577a35193d3affbc')
 options=(!strip libtool staticlibs)
 groups=('ps5-payload-dev')
-makedepends=('ps5-payload-sdk')
-depends=('ps5-payload-libogg')
+makedepends=(
+	'ps5-payload-libogg'
+	'ps5-payload-sdk'
+)
 
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then
