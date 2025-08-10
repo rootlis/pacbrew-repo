@@ -1,6 +1,6 @@
 pkgname=ps5-payload-mesa
 pkgver=22.1.7
-pkgrel=2
+pkgrel=1
 pkgdesc="Open-source OpenGL drivers"
 url="https://www.mesa3d.org/"
 arch=('any')
@@ -44,8 +44,6 @@ build() {
 
     export CFLAGS="-Wno-thread-safety-analysis"
     export CXXFLAGS="-Wno-thread-safety-analysis -std=c++17"
-    # Disable ELF thread-local storage during link-time optimization
-    export LDFLAGS="${LDFLAGS} -Wl,-plugin-opt=-emulated-tls"
     ${MESON} setup builddir \
 	     -Dosmesa=true \
 	     -Dplatforms= \
