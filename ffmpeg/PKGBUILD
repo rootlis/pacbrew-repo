@@ -1,6 +1,6 @@
 pkgname=ps5-payload-ffmpeg
 pkgver=7.0.1
-pkgrel=1
+pkgrel=2
 pkgdesc='ffmpeg port'
 arch=('any')
 url='https://ffmpeg.org'
@@ -16,7 +16,7 @@ makedepends=(
 	'ps5-payload-harfbuzz'
 	'ps5-payload-libass'
 	'ps5-payload-libfribidi'
-	'ps5-payload-libressl'
+	'ps5-payload-openssl'
 	'ps5-payload-sdk'
 	'ps5-payload-zlib'
 	'yasm'
