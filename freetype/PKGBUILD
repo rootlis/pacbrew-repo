@@ -9,12 +9,8 @@ source=("http://download.savannah.gnu.org/releases/freetype/freetype-$pkgver.tar
 sha256sums=('1ac27e16c134a7f2ccea177faba19801131116fd682efc1f5737037c5db224b5')
 options=(!strip libtool staticlibs)
 groups=('ps5-payload-dev')
-makedepends=(
-	'ps5-payload-bzip2'
-	'ps5-payload-libpng'
-	'ps5-payload-sdk'
-	'ps5-payload-zlib'
-)
+makedepends=('ps5-payload-sdk')
+depends=("ps5-payload-bzip2" "ps5-payload-libpng" "ps5-payload-zlib")
 
 
 prepare() {

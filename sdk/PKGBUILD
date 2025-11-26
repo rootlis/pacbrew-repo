@@ -9,13 +9,7 @@ source=("git+$url.git")
 sha256sums=('SKIP')
 groups=('ps5-payload-dev')
 options=(!strip libtool staticlibs)
-depends=(
-	'clang18'
-	'cmake'
-	'lld18'
-	'llvm18'
-	'python'
-)
+depends=('clang18' 'llvm18' 'lld18' 'cmake' 'python')
 makedepends=('git')
 
 prepare() {

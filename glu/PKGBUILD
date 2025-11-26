@@ -9,11 +9,8 @@ options=(!strip libtool staticlibs)
 source=("https://mesa.freedesktop.org/archive/glu/glu-$pkgver.tar.xz")
 sha256sums=('bd43fe12f374b1192eb15fe20e45ff456b9bc26ab57f0eee919f96ca0f8a330f')
 groups=('ps5-payload-dev' 'ps5-payload-gl')
-makedepends=(
-	'ps5-payload-mesa'
-	'ps5-payload-sdk'
-	'meson'
-)
+depends=('ps5-payload-mesa')
+makedepends=('ps5-payload-sdk' 'meson')
 
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then

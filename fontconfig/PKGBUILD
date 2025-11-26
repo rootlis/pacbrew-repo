@@ -9,12 +9,8 @@ options=(!strip libtool staticlibs)
 source=("https://www.freedesktop.org/software/fontconfig/release/fontconfig-$pkgver.tar.gz")
 sha256sums=('SKIP')
 groups=('ps5-payload-dev')
-makedepends=(
-	'ps5-payload-expat'
-	'ps5-payload-freetype'
-	'ps5-payload-sdk'
-	'gperf'
-)
+depends=('ps5-payload-freetype' 'ps5-payload-expat')
+makedepends=('ps5-payload-sdk' 'gperf')
 
 prepare() {
     export PS5_PAYLOAD_SDK=/opt/ps5-payload-sdk
