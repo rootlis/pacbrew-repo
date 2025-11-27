@@ -1,5 +1,5 @@
 pkgname=ps5-payload-file
-pkgver=5.45
+pkgver=5.46
 pkgrel=1
 pkgdesc='File type identification utility'
 arch=('any')
@@ -7,7 +7,7 @@ license=('custom')
 url='https://www.darwinsys.com/file/'
 options=(!strip libtool staticlibs)
 source=("https://astron.com/pub/file/file-$pkgver.tar.gz")
-sha256sums=('fc97f51029bb0e2c9f4e3bffefdaf678f0e039ee872b9de5c002a6d09c784d82')
+sha256sums=('c9cc77c7c560c543135edc555af609d5619dbef011997e988ce40a3d75d86088')
 makedepends=('ps5-payload-sdk')
 depends=('ps5-payload-zlib' 'ps5-payload-xz' 'ps5-payload-bzip2' 'ps5-payload-openlibm')
 groups=('ps5-payload-dev')
@@ -21,21 +21,15 @@ prepare() {
 build() {
     cd file-$pkgver
 
-    # Build host binary first
-    mkdir host-build
-    pushd host-build
-    ../configure --prefix="$(pwd)/staging" \
-		--enable-static --disable-shared
-    make
-    make install
-    popd
+    # When cross-compiling, build system needs the same version of file as the target
+    ./configure --prefix="$PWD/host"
+    make install V=1
+    export FILE_COMPILE=$PWD/host/bin/file
 
-    # Use host binary to cross-build
-    export PATH="$(pwd)/host-build/staging/bin:$PATH"
     source "${PS5_PAYLOAD_SDK}/toolchain/prospero.sh"
     ./configure --prefix="${PREFIX}" --host=x86_64-pc-freebsd \
 		--enable-static --disable-shared
-    ${MAKE}
+    ${MAKE} V=1
 }
 
 package() {
@@ -43,7 +37,7 @@ package() {
     cd file-$pkgver
 
     export DESTDIR="${pkgdir}/${DESTDIR}"
-    make install
+    ${MAKE} install
 
     ${PS5_CROSS_FIX_ROOT} "${DESTDIR}/${PREFIX}"
 }
