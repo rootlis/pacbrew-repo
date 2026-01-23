@@ -33,5 +33,6 @@ package() {
     source "${PS5_PAYLOAD_SDK}/toolchain/prospero.sh"
     cd elfldr
 
-    install -Dm 755 elfldr-ps5.elf -t "${pkgdir}/${DESTDIR}/${PREFIX}/sbin/elfldr.elf"
+    mkdir -p "${pkgdir}/${DESTDIR}/${PREFIX}/sbin"
+    cp elfldr-ps5.elf "${pkgdir}/${DESTDIR}/${PREFIX}/sbin/elfldr.elf"
 }

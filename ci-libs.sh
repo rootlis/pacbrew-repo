@@ -6,7 +6,7 @@ PKGS=(sdk openlibm libcxx fast_float
       libevent libiconv libfribidi libpsl
       libconfig json-c tinyxml2 libxml2 expat jansson
       miniupnpc
-      file
+      file libb64 libnatpmp libutp
       sqlite libmicrohttpd libmicrodns
       libnfs libsmb2 libssh2
       libpng libjpeg-turbo libwebp giflib
@@ -16,6 +16,7 @@ PKGS=(sdk openlibm libcxx fast_float
       libass
       libvpx libmpeg2 libtheora
       enet glm
+      dht
       SDL2 SDL2_mixer SDL2_ttf SDL2_image SDL2_net SDL2_gfx
       imgui lua luajit curl ffmpeg SDL2_kitchensink
       llvm mesa
