@@ -16,20 +16,16 @@ prepare() {
 	export PS5_PAYLOAD_SDK=/opt/ps5-payload-sdk
     fi
     cd zlib-$pkgver/contrib/minizip
-    sed -i 's|"shared"||g' minizipConfig.cmake.in
+    sed -i 's|ioapi.h|ioapi.h ints.h|g' Makefile.am
+    autoreconf --force --verbose --install
 }
 
 build() {
     source "${PS5_PAYLOAD_SDK}/toolchain/prospero.sh"
     cd zlib-$pkgver/contrib/minizip
 
-    ${CMAKE} -DCMAKE_BUILD_TYPE=Release \
-	     -DMINIZIP_BUILD_STATIC=YES \
-	     -DMINIZIP_BUILD_SHARED=NO \
-	     -DMINIZIP_INSTALL=YES \
-	     -B build \
-             -S .
-    ${MAKE} -C build
+    ./configure --prefix="${PREFIX}" --host=x86_64
+    ${MAKE}
 }
 
 package() {
@@ -37,5 +33,7 @@ package() {
     cd zlib-$pkgver/contrib/minizip
 
     export DESTDIR="${pkgdir}/${DESTDIR}"
-    ${MAKE} -C build install
+    ${MAKE} install
+
+    ${PS5_CROSS_FIX_ROOT} "${DESTDIR}/${PREFIX}"
 }

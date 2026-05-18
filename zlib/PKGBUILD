@@ -15,22 +15,14 @@ prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then
 	export PS5_PAYLOAD_SDK=/opt/ps5-payload-sdk
     fi
-    cd zlib-$pkgver
-    sed -i 's|"shared"||g' zlibConfig.cmake.in
 }
 
 build() {
     source "${PS5_PAYLOAD_SDK}/toolchain/prospero.sh"
     cd zlib-$pkgver
 
-    ${CMAKE} -DCMAKE_BUILD_TYPE=Release \
-	     -DZLIB_BUILD_TESTING=NO \
-	     -DZLIB_BUILD_SHARED=NO \
-	     -DZLIB_BUILD_STATIC=YES \
-	     -DZLIB_INSTALL=YES \
-	     -B build \
-	     -S .
-    ${MAKE} -C build
+    ./configure --prefix="${PREFIX}"
+    ${MAKE}
 }
 
 package() {
@@ -38,5 +30,7 @@ package() {
     cd zlib-$pkgver
 
     export DESTDIR="${pkgdir}/${DESTDIR}"
-    ${MAKE} -C build install
+    ${MAKE} install
+
+    ${PS5_CROSS_FIX_ROOT} "${DESTDIR}/${PREFIX}"
 }
