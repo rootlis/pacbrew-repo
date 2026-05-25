@@ -1,0 +1,42 @@
+pkgname=ps5-payload-love
+pkgver=11.5
+pkgrel=0
+pkgdesc='An open-source 2D game engine which uses the versatile Lua scripting language to create dynamic gaming experiences'
+arch=('any')
+url='http://love2d.org'
+license=('zlib')
+source=("https://github.com/love2d/love/releases/download/${pkgver}/love-${pkgver}-linux-src.tar.gz")
+sha256sums=('066e0843f71aa9fd28b8eaf27d41abb74bfaef7556153ac2e3cf08eafc874c39')
+options=(!strip libtool staticlibs)
+groups=('ps5-payload-dev')
+makedepends=('ps5-payload-sdk' 'ps5-payload-luajit'
+	     'ps5-payload-freetype' 'ps5-payload-sdl2' 'ps5-payload-openal'
+	     'ps5-payload-libvorbis' 'ps5-payload-libtheora' 'ps5-payload-mpg123')
+
+prepare() {
+    if [ -z "${PS5_PAYLOAD_SDK}" ]; then
+	export PS5_PAYLOAD_SDK=/opt/ps5-payload-sdk
+    fi
+
+    cd love-$pkgver
+    sed -i 's|LUA_VERSION_NUM==501|0|g' src/libraries/luasocket/libluasocket/compat.c
+}
+
+build() {
+    source "${PS5_PAYLOAD_SDK}/toolchain/prospero.sh"
+    cd love-$pkgver
+
+    ./configure --prefix="${PREFIX}" --host=x86_64-pc-freebsd \
+		--enable-static --disable-shared
+    ${MAKE}
+}
+
+package() {
+    source "${PS5_PAYLOAD_SDK}/toolchain/prospero.sh"
+    cd love-$pkgver
+
+    export DESTDIR="${pkgdir}/${DESTDIR}"
+    ${MAKE} install
+
+  ${PS5_CROSS_FIX_ROOT} "${DESTDIR}/${PREFIX}"
+}
