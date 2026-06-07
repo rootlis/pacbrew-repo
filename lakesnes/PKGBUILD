@@ -9,7 +9,8 @@ options=(!strip libtool staticlibs)
 source=('git+https://github.com/ps5-payload-dev/LakeSnes.git')
 sha256sums=('SKIP')
 groups=('ps5-payload-dev' 'ps5-payload-game')
-makedepends=('ps5-payload-sdk' 'ps5-payload-sdl2' 'git')
+makedepends=('ps5-payload-sdk' 'ps5-payload-sdl2')
+makedepends+=('git')
 
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then

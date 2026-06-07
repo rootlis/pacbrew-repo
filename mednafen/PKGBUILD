@@ -15,8 +15,8 @@ makedepends=('ps5-payload-sdk'
     'ps5-payload-flac'
     'ps5-payload-openlibm'
     'ps5-payload-zlib'
-    'ps5-payload-libiconv'
-    'git')
+    'ps5-payload-libiconv')
+makedepends+=('git')
 groups=('ps5-payload-dev' 'ps5-payload-game')
 
 prepare() {

@@ -10,7 +10,8 @@ source=("https://github.com/nigels-com/glew/releases/download/glew-$pkgver/glew-
 sha256sums=('b64790f94b926acd7e8f84c5d6000a86cb43967bd1e688b03089079799c9e889')
 groups=('ps5-payload-dev' 'ps5-payload-gl')
 depends=('ps5-payload-mesa')
-makedepends=('ps5-payload-sdk' 'git' 'meson')
+makedepends=('ps5-payload-sdk')
+makedepends+=('git' 'meson')
 
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then
