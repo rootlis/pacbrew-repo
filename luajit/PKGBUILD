@@ -11,7 +11,6 @@ sha256sums=('SKIP')
 groups=('ps5-payload-dev')
 makedepends=('ps5-payload-sdk' 'ps5-payload-openlibm' 'ps5-payload-libcxx')
 makedepends+=('git')
-
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then
 	export PS5_PAYLOAD_SDK=/opt/ps5-payload-sdk
