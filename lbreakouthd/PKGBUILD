@@ -23,8 +23,6 @@ prepare() {
     sed -i 's|AC_FUNC_REALLOC||g' configure.ac
     sed -i 's|SDL_RENDERER_ACCELERATED|SDL_RENDERER_SOFTWARE|g' src/sdl.cpp
 
-    echo 'AM_GNU_GETTEXT_VERSION(0.25)' >> configure.ac
-    autopoint -f
     autoreconf -fi
 }
 
