@@ -19,3 +19,4 @@ pkg
 .BUILDINFO
 .MTREE
 .PKGINFO
+*.pkg.tar.*.sig
