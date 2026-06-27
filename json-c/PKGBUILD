@@ -24,10 +24,10 @@ build() {
     cd json-c-json-c-0.17-20230812
 
     ${CMAKE} -DCMAKE_BUILD_TYPE=Release \
-	     -DCMAKE_C_FLAGS="-Wno-unreachable-code-generic-assoc" \
-	     -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
-	     -B build \
-             -S .
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+        -DCMAKE_C_FLAGS="-Wno-unreachable-code-generic-assoc" \
+        -B build \
+        -S .
     ${MAKE} -C build
 }
 
