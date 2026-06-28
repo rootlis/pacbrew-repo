@@ -5,7 +5,7 @@ pkgdesc="An SDK for PS5 payloads that uses dynamic linking"
 arch=('any')
 license=('GPLv3')
 url="https://github.com/ps5-payload-dev/sdk"
-source=("git+$url.git")
+source=("git+https://github.com/ps5-payload-dev/sdk.git")
 sha256sums=('SKIP')
 groups=('ps5-payload-dev')
 options=(!strip libtool staticlibs)
@@ -24,7 +24,6 @@ pkgver() {
 }
 
 build() {
-    export PATH="/usr/lib/llvm18/bin:$PATH"
     make -C sdk
 }
 
