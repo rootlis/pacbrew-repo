@@ -6,7 +6,8 @@ url='https://www.libssh.org/'
 license=('LGPL-2.1-or-later')
 arch=('any')
 options=(!strip libtool staticlibs)
-source=("https://www.libssh.org/files/${pkgver%.*}/libssh-${pkgver}.tar.xz")
+# Temporary source until upstream is available again
+source=("http://distcache.freebsd.org/local-distfiles/sunpoet/libssh-${pkgver}.tar.xz")
 sha256sums=('1a6af424d8327e5eedef4e5fe7f5b924226dd617ac9f3de80f217d82a36a7121')
 groups=('ps5-payload-dev')
 depends=('ps5-payload-zlib' 'ps5-payload-openssl')
