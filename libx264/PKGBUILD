@@ -10,6 +10,7 @@ sha256sums=('SKIP')
 options=(!strip libtool staticlibs)
 groups=('ps5-payload-dev')
 makedepends=('ps5-payload-sdk' 'ps5-payload-openlibm')
+makedepends+=('git' 'nasm')
 
 
 prepare() {
