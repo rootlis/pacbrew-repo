@@ -9,7 +9,7 @@ source=("git+https://github.com/ps5-payload-dev/sdk.git")
 sha256sums=('SKIP')
 groups=('ps5-payload-dev')
 options=(!strip libtool staticlibs)
-depends=('clang18' 'llvm18' 'lld18' 'cmake' 'python')
+depends=('clang18' 'llvm18' 'lld18' 'cmake' 'python' 'socat')
 makedepends=('git')
 
 prepare() {
