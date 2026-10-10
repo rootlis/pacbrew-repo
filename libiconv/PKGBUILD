@@ -10,6 +10,7 @@ source=("https://ftp.gnu.org/pub/gnu/libiconv/libiconv-$pkgver.tar.gz")
 sha256sums=('8f74213b56238c85a50a5329f77e06198771e70dd9a739779f4c02f65d971313')
 groups=('ps5-payload-dev')
 makedepends=('ps5-payload-sdk')
+makedepends+=('clang' 'llvm' 'lld')
 
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then

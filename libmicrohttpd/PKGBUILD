@@ -9,6 +9,7 @@ source=("https://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-$pkgver.tar.gz")
 sha256sums=('a89e09fc9b4de34dde19f4fcb4faaa1ce10299b9908db1132bbfa1de47882b94')
 options=(!strip libtool staticlibs)
 makedepends=('ps5-payload-sdk')
+makedepends+=('clang' 'llvm' 'lld')
 groups=('ps5-payload-dev')
 
 prepare() {

@@ -10,6 +10,7 @@ source=("https://github.com/Mbed-TLS/mbedtls/releases/download/mbedtls-${pkgver}
 sha256sums=('ec35b18a6c593cf98c3e30db8b98ff93e8940a8c4e690e66b41dfc011d678110')
 groups=('ps5-payload-dev')
 makedepends=('ps5-payload-sdk')
+makedepends+=('clang' 'llvm' 'lld' 'cmake')
 
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then

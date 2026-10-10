@@ -9,7 +9,7 @@ options=(!strip libtool staticlibs)
 source=("https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/${pkgver}/libjpeg-turbo-${pkgver}.tar.gz")
 sha256sums=('SKIP')
 makedepends=('ps5-payload-sdk' 'ps5-payload-openlibm')
-makedepends+=('git')
+makedepends+=('git' 'clang' 'llvm' 'lld' 'cmake')
 groups=('ps5-payload-dev')
 
 prepare() {

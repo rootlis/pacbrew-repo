@@ -14,8 +14,8 @@ groups=('ps5-payload-dev')
 depends=('ps5-payload-zlib' 'ps5-payload-openssl' 'ps5-payload-freetype'
 	 'ps5-payload-libfribidi' 'ps5-payload-harfbuzz' 'ps5-payload-libass'
 	 'ps5-payload-libx264')
-makedepends=('ps5-payload-sdk')
-makedepends+=('yasm')
+makedepends=('ps5-payload-sdk' 'ps5-payload-openlibm')
+makedepends+=('yasm' 'clang' 'llvm' 'lld')
 
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then

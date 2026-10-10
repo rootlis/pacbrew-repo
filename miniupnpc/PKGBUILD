@@ -10,6 +10,7 @@ source=(https://miniupnp.tuxfamily.org/files/miniupnpc-${pkgver}.tar.gz)
 sha256sums=('SKIP')
 groups=('ps5-payload-dev')
 makedepends=('ps5-payload-sdk')
+makedepends+=('clang' 'llvm' 'lld')
 
 
 prepare() {

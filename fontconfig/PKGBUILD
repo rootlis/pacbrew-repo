@@ -11,7 +11,7 @@ sha256sums=('SKIP')
 groups=('ps5-payload-dev')
 depends=('ps5-payload-freetype' 'ps5-payload-expat')
 makedepends=('ps5-payload-sdk')
-makedepends+=('gperf')
+makedepends+=('gperf' 'clang' 'llvm' 'lld')
 
 prepare() {
     export PS5_PAYLOAD_SDK=/opt/ps5-payload-sdk

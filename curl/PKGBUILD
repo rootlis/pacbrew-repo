@@ -11,6 +11,7 @@ options=(!strip libtool staticlibs)
 groups=('ps5-payload-dev')
 depends=('ps5-payload-zlib' 'ps5-payload-openssl')
 makedepends=('ps5-payload-sdk' 'ps5-payload-libpsl')
+makedepends+=('clang' 'llvm' 'lld')
 
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then

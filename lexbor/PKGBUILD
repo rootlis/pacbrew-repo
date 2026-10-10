@@ -10,6 +10,7 @@ source=("https://github.com/lexbor/lexbor/archive/refs/tags/v$pkgver.tar.gz")
 sha256sums=('eafaa79ef9871f0bbb1978eda8677d184f7ecdcaa203d7cd25b3f86e32c014c2')
 groups=('ps5-payload-dev')
 makedepends=('ps5-payload-sdk' 'ps5-payload-libcxx')
+makedepends+=('clang' 'llvm' 'lld' 'cmake')
 
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then

@@ -10,7 +10,7 @@ source=("${url}/releases/download/release-${pkgver}/SDL2_mixer-${pkgver}.tar.gz"
 sha256sums=('SKIP')
 groups=('ps5-payload-dev' 'ps5-payload-sdl2')
 makedepends=('ps5-payload-sdk' 'ps5-payload-sdl2')
-makedepends+=('git')
+makedepends+=('git' 'clang' 'llvm' 'lld')
 
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then

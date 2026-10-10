@@ -16,7 +16,7 @@ sha256sums=('SKIP'
 
 groups=('ps5-payload-dev')
 makedepends=('ps5-payload-sdk')
-makedepends+=('meson' 'git')
+makedepends+=('meson' 'git' 'clang' 'llvm' 'lld')
 
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then

@@ -12,7 +12,7 @@ sha256sums=('SKIP'
 	    '0c1fda27342a22c6f140950e9c51c47651f4092119d6971f857c8fd7769723c7')
 groups=('ps5-payload-dev')
 makedepends=('ps5-payload-sdk' 'ps5-payload-libcxx' 'ps5-payload-glu')
-makedepends+=('git')
+makedepends+=('git' 'clang' 'llvm' 'lld' 'cmake')
 
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then

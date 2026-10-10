@@ -10,6 +10,7 @@ source=('https://bellard.org/quickjs/quickjs-2026-06-04.tar.xz')
 sha256sums=('b376e839b322978313d929fd20663b11ba58b75df5a46c126dd19ea2fa70ad2a')
 groups=('ps5-payload-dev')
 makedepends=('ps5-payload-sdk' 'ps5-payload-openlibm')
+makedepends+=('clang' 'llvm' 'lld')
 
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then

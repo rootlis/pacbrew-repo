@@ -11,6 +11,7 @@ sha256sums=('0684ed2c8406437e7519a1bd20ea83780db871b3a3a5d752311ba3e889dbfc70')
 
 groups=('ps5-payload-dev')
 makedepends=('ps5-payload-sdk')
+makedepends+=('clang' 'llvm' 'lld')
 
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then

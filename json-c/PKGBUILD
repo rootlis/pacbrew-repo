@@ -11,7 +11,7 @@ source=("https://github.com/json-c/json-c/releases/download/json-c-${pkgver}-${_
 sha256sums=('37ad0249902e301bd9052bf712e511fcc6acff4ecaad4b5900aad9ce564e26de')
 groups=('ps5-payload-dev')
 makedepends=('ps5-payload-openlibm')
-makedepends+=('doxygen' 'git')
+makedepends+=('doxygen' 'git' 'clang' 'llvm' 'lld' 'cmake')
 depends=('ps5-payload-sdk')
 
 prepare() {

@@ -10,6 +10,7 @@ source=("https://github.com/JuliaMath/openlibm/archive/refs/tags/v$pkgver.tar.gz
 sha256sums=('347998968cfeb2f9b91de6a8e85d2ba92dec0915d53500a4bc483e056f85b94c')
 groups=('ps5-payload-dev')
 makedepends=('ps5-payload-sdk')
+makedepends+=('clang' 'llvm' 'lld' 'cmake')
 
 
 prepare() {
