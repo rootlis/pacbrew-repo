@@ -76,8 +76,9 @@ sha256sums=('efd4bb08cdb7c365a812cd4e6c9202ab55b2f22cdcd13c7d6c4f9647b799a4ef'
 groups=('ps5-payload-dev' 'ps5-payload-gl')
 makedepends=('ps5-payload-sdk' 'ps5-payload-libcxx' 'ps5-payload-openlibm'
 	     'ps5-payload-zlib' 'ps5-payload-zstd')
-makedepends+=('meson' 'python-mako' 'python-setuptools'
-	      'clang' 'llvm' 'lld' 'cmake')
+makedepends+=('meson' 'python-mako' 'python-setuptools' 'python-yaml'
+	      'spirv-llvm-translator' 'glslang' 'clang' 'llvm' 'lld'
+	      'cmake')
 
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then
