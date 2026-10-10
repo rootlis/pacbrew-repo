@@ -9,7 +9,8 @@ options=(!strip libtool staticlibs)
 source=("https://github.com/KhronosGroup/Vulkan-Headers/archive/refs/tags/v$pkgver.tar.gz")
 sha256sums=('4ca3606e57728febf8aef097c9d7ba6c52385955bb4a6dc06fcf9fc3d76541de')
 groups=('ps5-payload-dev' 'ps5-payload-gl')
-makedepends=('ps5-payload-sdk')
+makedepends=('ps5-payload-sdk' 'ps5-payload-libcxx')
+makedepends+=('clang' 'llvm' 'lld' 'cmake')
 
 prepare() {
     if [ -z "${PS5_PAYLOAD_SDK}" ]; then
