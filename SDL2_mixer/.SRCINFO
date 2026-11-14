@@ -1,0 +1,22 @@
+pkgbase = ps5-payload-sdl2_mixer
+	pkgdesc = A sample multi-channel audio mixer library.
+	pkgver = 2.8.0
+	pkgrel = 1
+	url = https://github.com/libsdl-org/SDL_mixer
+	arch = any
+	groups = ps5-payload-dev
+	groups = ps5-payload-sdl2
+	license = zlib
+	makedepends = ps5-payload-sdk
+	makedepends = ps5-payload-sdl2
+	makedepends = git
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://github.com/libsdl-org/SDL_mixer/releases/download/release-2.8.0/SDL2_mixer-2.8.0.tar.gz
+	sha256sums = SKIP
+
+pkgname = ps5-payload-sdl2_mixer
