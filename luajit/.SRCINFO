@@ -1,0 +1,22 @@
+pkgbase = ps5-payload-luajit
+	pkgdesc = Just-in-time compiler and drop-in replacement for Lua 5.1
+	pkgver = 2.1.1748459687
+	pkgrel = 1
+	url = https://luajit.org/
+	arch = any
+	groups = ps5-payload-dev
+	license = MIT
+	makedepends = ps5-payload-sdk
+	makedepends = ps5-payload-openlibm
+	makedepends = ps5-payload-libcxx
+	makedepends = git
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = git+https://github.com/LuaJIT/LuaJIT.git#commit=f9140a622a0c44a99efb391cc1c2358bc8098ab7
+	sha256sums = SKIP
+
+pkgname = ps5-payload-luajit
