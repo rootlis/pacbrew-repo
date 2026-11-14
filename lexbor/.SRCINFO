@@ -1,0 +1,21 @@
+pkgbase = ps5-payload-lexbor
+	pkgdesc = A set of fast, standards-compliant tools for working with modern web technologies
+	pkgver = 3.0.0
+	pkgrel = 1
+	url = https://lexbor.com
+	arch = any
+	groups = ps5-payload-dev
+	license = Apache-2.0
+	makedepends = ps5-payload-sdk
+	makedepends = ps5-payload-libcxx
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	makedepends = cmake
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://github.com/lexbor/lexbor/archive/refs/tags/v3.0.0.tar.gz
+	sha256sums = eafaa79ef9871f0bbb1978eda8677d184f7ecdcaa203d7cd25b3f86e32c014c2
+
+pkgname = ps5-payload-lexbor
