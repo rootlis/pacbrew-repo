@@ -1,5 +1,5 @@
 pkgname=ps5-payload-offact
-pkgver=git
+pkgver=0.4.1.r0.g8c870eb
 pkgrel=1
 pkgdesc="PS5 offline account activation"
 arch=('any')
