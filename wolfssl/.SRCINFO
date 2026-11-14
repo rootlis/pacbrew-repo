@@ -1,0 +1,19 @@
+pkgbase = ps5-payload-wolfssl
+	pkgdesc = Lightweight, portable, C-language-based SSL/TLS library
+	pkgver = 5.7.2
+	pkgrel = 1
+	url = https://www.wolfssl.com
+	arch = any
+	groups = ps5-payload-dev
+	license = GPL-2.0-or-later
+	makedepends = ps5-payload-sdk
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://github.com/wolfssl/wolfssl/archive/refs/tags/v5.7.2-stable.tar.gz
+	sha256sums = 0f2ed82e345b833242705bbc4b08a2a2037a33f7bf9c610efae6464f6b10e305
+
+pkgname = ps5-payload-wolfssl
