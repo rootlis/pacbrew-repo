@@ -1,0 +1,22 @@
+pkgbase = ps5-payload-libxml2
+	pkgdesc = XML C parser and toolkit
+	pkgver = 2.13.5
+	pkgrel = 1
+	url = https://github.com/GNOME/libxml2
+	arch = any
+	groups = ps5-payload-dev
+	license = MIT
+	makedepends = ps5-payload-sdk
+	makedepends = git
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	depends = ps5-payload-xz
+	depends = ps5-payload-zlib
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://github.com/GNOME/libxml2/archive/refs/tags/v2.13.5.tar.gz
+	sha256sums = 87d681718760ba42e749a61482d71b34d1d566843e9ade39a73fea92caf8293b
+
+pkgname = ps5-payload-libxml2
