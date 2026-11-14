@@ -1,0 +1,21 @@
+pkgbase = ps5-payload-glm
+	pkgdesc = C++ mathematics library for 3D software based on the OpenGL Shading Language (GLSL) specification
+	pkgver = 1.0.1
+	pkgrel = 1
+	url = http://glm.g-truc.net
+	arch = any
+	groups = ps5-payload-dev
+	license = MIT
+	makedepends = ps5-payload-sdk
+	makedepends = ps5-payload-libcxx
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	makedepends = cmake
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://github.com/g-truc/glm/archive/refs/tags/1.0.1.tar.gz
+	sha256sums = SKIP
+
+pkgname = ps5-payload-glm
