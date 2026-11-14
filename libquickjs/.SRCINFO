@@ -1,0 +1,20 @@
+pkgbase = ps5-payload-libquickjs
+	pkgdesc = A small and embeddable Javascript engine
+	pkgver = 2026.06.04
+	pkgrel = 1
+	url = https://bellard.org/quickjs/
+	arch = any
+	groups = ps5-payload-dev
+	license = MIT
+	makedepends = ps5-payload-sdk
+	makedepends = ps5-payload-openlibm
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://bellard.org/quickjs/quickjs-2026-06-04.tar.xz
+	sha256sums = b376e839b322978313d929fd20663b11ba58b75df5a46c126dd19ea2fa70ad2a
+
+pkgname = ps5-payload-libquickjs
