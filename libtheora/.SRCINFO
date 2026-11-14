@@ -1,0 +1,20 @@
+pkgbase = ps5-payload-libtheora
+	pkgdesc = Standard encoder and decoder library for the Theora video compression format
+	pkgver = 1.1.1
+	pkgrel = 1
+	url = https://www.theora.org/
+	arch = any
+	groups = ps5-payload-dev
+	license = BSD-3-Clause
+	makedepends = ps5-payload-sdk
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	depends = ps5-payload-libogg
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = http://downloads.xiph.org/releases/theora/libtheora-1.1.1.tar.bz2
+	sha256sums = b6ae1ee2fa3d42ac489287d3ec34c5885730b1296f0801ae577a35193d3affbc
+
+pkgname = ps5-payload-libtheora
