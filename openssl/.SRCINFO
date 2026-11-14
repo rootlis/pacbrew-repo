@@ -1,0 +1,19 @@
+pkgbase = ps5-payload-openssl
+	pkgdesc = The Open Source toolkit for Secure Sockets Layer and Transport Layer Security
+	pkgver = 3.5.2
+	pkgrel = 1
+	url = https://www.openssl.org
+	arch = any
+	groups = ps5-payload-dev
+	license = Apache-2.0
+	makedepends = ps5-payload-sdk
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://github.com/openssl/openssl/releases/download/openssl-3.5.2/openssl-3.5.2.tar.gz
+	sha256sums = c53a47e5e441c930c3928cf7bf6fb00e5d129b630e0aa873b08258656e7345ec
+
+pkgname = ps5-payload-openssl
