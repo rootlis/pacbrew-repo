@@ -1,0 +1,20 @@
+pkgbase = ps5-payload-libcxx
+	pkgdesc = LLVM C++ Standard Library
+	pkgver = 18.1.8
+	pkgrel = 1
+	url = https://libcxx.llvm.org
+	arch = any
+	groups = ps5-payload-dev
+	license = Apache2
+	makedepends = ps5-payload-sdk
+	makedepends = cmake
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.8/llvm-project-18.1.8.src.tar.xz
+	sha256sums = 0b58557a6d32ceee97c8d533a59b9212d87e0fc4d2833924eb6c611247db2f2a
+
+pkgname = ps5-payload-libcxx
