@@ -1,0 +1,22 @@
+pkgbase = ps5-payload-libjpeg-turbo
+	pkgdesc = libjpeg derivative with accelerated baseline JPEG compression and decompression
+	pkgver = 3.0.2
+	pkgrel = 1
+	url = https://github.com/libjpeg-turbo
+	arch = any
+	groups = ps5-payload-dev
+	license = IJG
+	makedepends = ps5-payload-sdk
+	makedepends = ps5-payload-openlibm
+	makedepends = git
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	makedepends = cmake
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.0.2/libjpeg-turbo-3.0.2.tar.gz
+	sha256sums = SKIP
+
+pkgname = ps5-payload-libjpeg-turbo
