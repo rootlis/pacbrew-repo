@@ -1,0 +1,19 @@
+pkgbase = ps5-payload-giflib
+	pkgdesc = Library for reading and writing gif images
+	pkgver = 5.2.2
+	pkgrel = 1
+	url = http://giflib.sourceforge.net/
+	arch = any
+	groups = ps5-payload-dev
+	license = MIT
+	makedepends = ps5-payload-sdk
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://downloads.sourceforge.net/project/giflib/giflib-5.x/giflib-5.2.2.tar.gz
+	sha256sums = be7ffbd057cadebe2aa144542fd90c6838c6a083b5e8a9048b8ee3b66b29d5fb
+
+pkgname = ps5-payload-giflib
