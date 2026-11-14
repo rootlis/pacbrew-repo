@@ -1,0 +1,24 @@
+pkgbase = ps5-payload-libass
+	pkgdesc = A portable subtitle renderer
+	pkgver = 0.17.3
+	pkgrel = 1
+	url = https://github.com/libass/libass
+	arch = any
+	groups = ps5-payload-dev
+	license = custom: ISC
+	makedepends = ps5-payload-sdk
+	makedepends = git
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	depends = ps5-payload-libfribidi
+	depends = ps5-payload-freetype
+	depends = ps5-payload-harfbuzz
+	depends = ps5-payload-fontconfig
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://github.com/libass/libass/releases/download/0.17.3/libass-0.17.3.tar.xz
+	sha256sums = SKIP
+
+pkgname = ps5-payload-libass
