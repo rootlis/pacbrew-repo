@@ -1,0 +1,20 @@
+pkgbase = ps5-payload-sqlite
+	pkgdesc = A C library that implements an SQL database engine
+	pkgver = 3.46.1
+	pkgrel = 1
+	url = https://www.sqlite.org/
+	arch = any
+	groups = ps5-payload-dev
+	license = LicenseRef-Sqlite
+	makedepends = ps5-payload-sdk
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	makedepends = tcl
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://www.sqlite.org/2024/sqlite-src-3460100.zip
+	sha256sums = def3fc292eb9ecc444f6c1950e5c79d8462ed5e7b3d605fd6152d145e1d5abb4
+
+pkgname = ps5-payload-sqlite
