@@ -1,5 +1,5 @@
 pkgname=ps5-payload-libmicrodns
-pkgver=git
+pkgver=0.2.0.r30.g02ad4cb
 pkgrel=1
 pkgdesc='Minimal mDNS resolver library'
 url='https://github.com/videolabs/libmicrodns'
