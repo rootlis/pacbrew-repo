@@ -1,0 +1,22 @@
+pkgbase = ps5-payload-lz4
+	pkgdesc = Extremely fast compression algorithm
+	pkgver = 1.10.0
+	pkgrel = 1
+	url = https://lz4.github.io/lz4/
+	arch = any
+	groups = ps5-payload-dev
+	groups = ps5-payload-sdl2
+	license = GPL-2.0-or-later
+	makedepends = ps5-payload-sdk
+	makedepends = git
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	makedepends = cmake
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://github.com/lz4/lz4/releases/download/v1.10.0/lz4-1.10.0.tar.gz
+	sha256sums = 537512904744b35e232912055ccf8ec66d768639ff3abe5788d90d792ec5f48b
+
+pkgname = ps5-payload-lz4
