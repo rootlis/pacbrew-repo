@@ -1,0 +1,24 @@
+pkgbase = ps5-payload-dht
+	pkgdesc = BitTorrent DHT library
+	pkgver = 0.28
+	pkgrel = 1
+	url = https://github.com/jech/dht
+	arch = any
+	groups = ps5-payload-dev
+	license = MIT
+	makedepends = ps5-payload-sdk
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	makedepends = cmake
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://github.com/jech/dht/archive/refs/tags/dht-0.28.tar.gz
+	source = dht-cmake-1.patch::https://github.com/transmission/dht/commit/015585510e402a057ec17142711ba2b568b5fd62.patch
+	source = dht-cmake-2.patch::https://github.com/transmission/dht/commit/38c9f261d9b58b76b9eaf85f84ec1b35151a1eac.patch
+	sha256sums = 2f91db29636ca84503b4bb59d7a4a6a681c3a547e12ef775f83e99b69be92f2d
+	sha256sums = d0ae373f650a96b579a6a1aac824fbcb0041254d1bc1bdcc7e09cd854f1d5b38
+	sha256sums = f767d6a1c01b426b1717686b9329e89df798ae93e13a84b81be224211e189d4f
+
+pkgname = ps5-payload-dht
