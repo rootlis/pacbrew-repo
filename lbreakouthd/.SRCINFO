@@ -1,0 +1,26 @@
+pkgbase = ps5-payload-lbreakouthd
+	pkgdesc = Scalable 16:9 remake of LBreakout2
+	pkgver = 1.1.8
+	pkgrel = 1
+	url = http://lgames.sourceforge.net/LBreakoutHD/
+	arch = any
+	groups = ps5-payload-dev
+	groups = ps5-payload-game
+	license = GPL3
+	makedepends = ps5-payload-sdl2_ttf
+	makedepends = ps5-payload-sdl2_image
+	makedepends = ps5-payload-sdl2_mixer
+	makedepends = ps5-payload-sdk
+	makedepends = ps5-payload-libcxx
+	makedepends = ps5-payload-libiconv
+	makedepends = ps5-payload-openlibm
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://downloads.sourceforge.net/project/lgames/lbreakouthd/lbreakouthd-1.1.8.tar.gz
+	sha256sums = SKIP
+
+pkgname = ps5-payload-lbreakouthd
