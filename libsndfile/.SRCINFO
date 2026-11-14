@@ -1,0 +1,26 @@
+pkgbase = ps5-payload-libsndfile
+	pkgdesc = A C library for reading and writing files containing sampled audio data
+	pkgver = 1.2.2
+	pkgrel = 1
+	url = https://libsndfile.github.io/libsndfile/
+	arch = any
+	groups = ps5-payload-dev
+	license = LGPL-2.1-or-later
+	makedepends = ps5-payload-sdk
+	makedepends = git
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	depends = ps5-payload-flac
+	depends = ps5-payload-lame
+	depends = ps5-payload-libogg
+	depends = ps5-payload-libvorbis
+	depends = ps5-payload-mpg123
+	depends = ps5-payload-opus
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://github.com/libsndfile/libsndfile/releases/download/1.2.2/libsndfile-1.2.2.tar.xz
+	sha256sums = 3799ca9924d3125038880367bf1468e53a1b7e3686a934f098b7e1d286cdb80e
+
+pkgname = ps5-payload-libsndfile
