@@ -1,0 +1,20 @@
+pkgbase = ps5-payload-libconfig
+	pkgdesc = C/C++ Configuration File Library
+	pkgver = 1.7.3
+	pkgrel = 1
+	url = https://www.hyperrealm.com/libconfig/libconfig.html
+	arch = any
+	groups = ps5-payload-dev
+	license = LGPL
+	makedepends = ps5-payload-sdk
+	makedepends = ps5-payload-libcxx
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://github.com/hyperrealm/libconfig/releases/download/v1.7.3/libconfig-1.7.3.tar.gz
+	sha256sums = 545166d6cac037744381d1e9cc5a5405094e7bfad16a411699bcff40bbb31ee7
+
+pkgname = ps5-payload-libconfig
