@@ -1,0 +1,19 @@
+pkgbase = ps5-payload-lame
+	pkgdesc = A high quality MPEG Audio Layer III (MP3) encoder
+	pkgver = 3.100
+	pkgrel = 1
+	url = http://lame.sourceforge.net
+	arch = any
+	groups = ps5-payload-dev
+	license = LGPL
+	makedepends = ps5-payload-sdk
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://downloads.sourceforge.net/lame/lame-3.100.tar.gz
+	sha256sums = ddfe36cab873794038ae2c1210557ad34857a4b6bdc515785d1da9e175b1da1e
+
+pkgname = ps5-payload-lame
