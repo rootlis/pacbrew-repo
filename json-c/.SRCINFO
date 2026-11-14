@@ -1,0 +1,23 @@
+pkgbase = ps5-payload-json-c
+	pkgdesc = A JSON implementation in C
+	pkgver = 0.19
+	pkgrel = 1
+	url = https://github.com/json-c/json-c/wiki
+	arch = any
+	groups = ps5-payload-dev
+	license = MIT
+	makedepends = ps5-payload-openlibm
+	makedepends = doxygen
+	makedepends = git
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	makedepends = cmake
+	depends = ps5-payload-sdk
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://github.com/json-c/json-c/releases/download/json-c-0.19-20260627/json-c-0.19.tar.gz
+	sha256sums = 37ad0249902e301bd9052bf712e511fcc6acff4ecaad4b5900aad9ce564e26de
+
+pkgname = ps5-payload-json-c
