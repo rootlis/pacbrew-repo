@@ -1,0 +1,21 @@
+pkgbase = ps5-payload-libdeflate
+	pkgdesc = Heavily optimized library for DEFLATE/zlib/gzip compression and decompression
+	pkgver = 1.19
+	pkgrel = 1
+	url = https://github.com/ebiggers/libdeflate
+	arch = any
+	groups = ps5-payload-dev
+	license = MIT
+	makedepends = ps5-payload-sdk
+	makedepends = git
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	makedepends = cmake
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://github.com/ebiggers/libdeflate/archive/refs/tags/v1.19.tar.gz
+	sha256sums = SKIP
+
+pkgname = ps5-payload-libdeflate
