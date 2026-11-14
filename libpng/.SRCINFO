@@ -1,0 +1,20 @@
+pkgbase = ps5-payload-libpng
+	pkgdesc = PNG format graphic files library
+	pkgver = 1.6.43
+	pkgrel = 1
+	url = http://www.libpng.org
+	arch = any
+	groups = ps5-payload-dev
+	license = custom
+	makedepends = ps5-payload-sdk
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	depends = ps5-payload-zlib
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://download.sourceforge.net/libpng/libpng-1.6.43.tar.xz
+	sha256sums = 6a5ca0652392a2d7c9db2ae5b40210843c0bbc081cbd410825ab00cc59f14a6c
+
+pkgname = ps5-payload-libpng
