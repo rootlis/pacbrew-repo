@@ -1,0 +1,21 @@
+pkgbase = ps5-payload-libsmb2
+	pkgdesc = SMB2/3 userspace client
+	pkgver = 6.2
+	pkgrel = 1
+	url = https://github.com/sahlberg/libsmb2
+	arch = any
+	groups = ps5-payload-dev
+	license = GPL
+	makedepends = ps5-payload-sdk
+	makedepends = git
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	makedepends = cmake
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://github.com/sahlberg/libsmb2/archive/refs/tags/libsmb2-6.2.tar.gz
+	sha256sums = 8e1f9efc6b2e0f6546f0fe121ac0ddf4fc2f0908ae5a6bd1f185be7c9e0bcbb3
+
+pkgname = ps5-payload-libsmb2
