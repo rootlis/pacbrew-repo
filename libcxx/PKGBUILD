@@ -1,6 +1,6 @@
 pkgname=ps5-payload-libcxx
 pkgver=18.1.8
-pkgrel=1
+pkgrel=2
 pkgdesc='LLVM C++ Standard Library'
 arch=('any')
 url='https://libcxx.llvm.org'
@@ -12,14 +12,7 @@ groups=('ps5-payload-dev')
 makedepends=('ps5-payload-sdk')
 makedepends+=('cmake' 'clang' 'llvm' 'lld')
 
-prepare() {
-    if [ -z "${PS5_PAYLOAD_SDK}" ]; then
-	export PS5_PAYLOAD_SDK=/opt/ps5-payload-sdk
-    fi
-}
-
 build() {
-    source "${PS5_PAYLOAD_SDK}/toolchain/prospero.sh"
     cd llvm-project-$pkgver.src
 
     ${CMAKE} -S runtimes -B build \
@@ -50,7 +43,6 @@ build() {
 }
 
 package() {
-    source "${PS5_PAYLOAD_SDK}/toolchain/prospero.sh"
     cd llvm-project-$pkgver.src
 
     ${MAKE} -C build install DESTDIR="${pkgdir}"

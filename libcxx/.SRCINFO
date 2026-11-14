@@ -1,7 +1,7 @@
 pkgbase = ps5-payload-libcxx
 	pkgdesc = LLVM C++ Standard Library
 	pkgver = 18.1.8
-	pkgrel = 1
+	pkgrel = 2
 	url = https://libcxx.llvm.org
 	arch = any
 	groups = ps5-payload-dev
