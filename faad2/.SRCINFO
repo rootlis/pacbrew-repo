@@ -1,0 +1,21 @@
+pkgbase = ps5-payload-faad2
+	pkgdesc = Freeware Advanced Audio (AAC) Decoder
+	pkgver = 2.11.1
+	pkgrel = 1
+	url = https://github.com/knik0/faad2
+	arch = any
+	groups = ps5-payload-dev
+	license = GPL-2.0-or-later
+	makedepends = ps5-payload-sdk
+	makedepends = git
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	makedepends = cmake
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://github.com/knik0/faad2/archive/2.11.1.tar.gz
+	sha256sums = 72dbc0494de9ee38d240f670eccf2b10ef715fd0508c305532ca3def3225bb06
+
+pkgname = ps5-payload-faad2
