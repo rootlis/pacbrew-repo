@@ -1,0 +1,25 @@
+pkgbase = ps5-payload-rmlui
+	pkgdesc = A HTML/CSS User Interface library
+	pkgver = 6.2
+	pkgrel = 1
+	url = https://mikke89.github.io/RmlUiDoc
+	arch = any
+	groups = ps5-payload-dev
+	license = MIT
+	makedepends = ps5-payload-sdk
+	makedepends = ps5-payload-libcxx
+	makedepends = ps5-payload-luajit
+	makedepends = ps5-payload-freetype
+	makedepends = ps5-payload-sdl2
+	makedepends = ps5-payload-sdl2_image
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	makedepends = cmake
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://github.com/mikke89/RmlUi/archive/refs/tags/6.2.tar.gz
+	sha256sums = 814c3ff7b9666280338d8f0dda85979f5daf028d01c85fc8975431d1e2fd8e8b
+
+pkgname = ps5-payload-rmlui
