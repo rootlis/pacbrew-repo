@@ -1,0 +1,22 @@
+pkgbase = ps5-payload-shsrv
+	pkgdesc = A telnet-like shell server for jailbroken PS5s that accepts connections on port 2323
+	pkgver = 0.19.r0.g6f32063
+	pkgrel = 1
+	url = https://github.com/ps5-payload-dev/shsrv
+	arch = any
+	groups = ps5-payload-dev
+	groups = ps5-payload-daemon
+	license = GPLv3
+	makedepends = ps5-payload-sdk
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	makedepends = git
+	makedepends = xxd
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = git+https://github.com/ps5-payload-dev/shsrv.git
+	sha256sums = SKIP
+
+pkgname = ps5-payload-shsrv
