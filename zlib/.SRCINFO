@@ -1,0 +1,22 @@
+pkgbase = ps5-payload-zlib
+	pkgdesc = Deflate compression method library
+	pkgver = 1.4
+	pkgrel = 3
+	url = http://www.zlib.net/
+	arch = any
+	groups = ps5-payload-dev
+	license = Zlib
+	makedepends = ps5-payload-sdk
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://github.com/madler/zlib/releases/download/v1.4/zlib-1.4.tar.gz
+	sha256sums = 02dd159783677a749c04adbdd02b55b8a2bcc7e054f51b76b549199a916ad584
+
+pkgname = ps5-payload-zlib
+
+pkgname = ps5-payload-libminizip
+	pkgdesc = Mini zip and unzip based on zlib
