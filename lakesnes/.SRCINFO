@@ -1,0 +1,22 @@
+pkgbase = ps5-payload-lakesnes
+	pkgdesc = A SNES emulator, in C
+	pkgver = 0.0.r0.ga2db690
+	pkgrel = 1
+	url = https://github.com/dinkc64/LakeSnes
+	arch = any
+	groups = ps5-payload-dev
+	groups = ps5-payload-game
+	license = MIT
+	makedepends = ps5-payload-sdk
+	makedepends = ps5-payload-sdl2
+	makedepends = git
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = git+https://github.com/ps5-payload-dev/LakeSnes.git
+	sha256sums = SKIP
+
+pkgname = ps5-payload-lakesnes

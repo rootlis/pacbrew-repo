@@ -1,5 +1,5 @@
 pkgname=ps5-payload-lakesnes
-pkgver=git
+pkgver=0.0.r0.ga2db690
 pkgrel=1
 pkgdesc='A SNES emulator, in C'
 arch=('any')
