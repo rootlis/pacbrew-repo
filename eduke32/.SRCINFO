@@ -1,0 +1,24 @@
+pkgbase = ps5-payload-eduke32
+	pkgdesc = An advanced Duke Nukem 3D source port
+	pkgver = 20240725
+	pkgrel = 1
+	url = http://eduke32.com/
+	arch = any
+	groups = ps5-payload-dev
+	groups = ps5-payload-game
+	license = GPL
+	makedepends = ps5-payload-sdk
+	makedepends = ps5-payload-libcxx
+	makedepends = ps5-payload-openlibm
+	makedepends = ps5-payload-sdl2
+	makedepends = ps5-payload-flac
+	makedepends = clang18
+	makedepends = llvm18
+	makedepends = lld18
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = http://dukeworld.duke4.net/eduke32/synthesis/20240725-10593-19c21b9ab/eduke32_src_20240725-10593-19c21b9ab.tar.xz
+	sha256sums = SKIP
+
+pkgname = ps5-payload-eduke32
