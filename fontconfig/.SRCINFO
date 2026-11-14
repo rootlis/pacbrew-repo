@@ -1,0 +1,22 @@
+pkgbase = ps5-payload-fontconfig
+	pkgdesc = Library for configuring and customizing font access
+	pkgver = 2.15.0
+	pkgrel = 1
+	url = https://www.freedesktop.org/wiki/Software/fontconfig
+	arch = any
+	groups = ps5-payload-dev
+	license = custom
+	makedepends = ps5-payload-sdk
+	makedepends = gperf
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	depends = ps5-payload-freetype
+	depends = ps5-payload-expat
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.15.0.tar.gz
+	sha256sums = SKIP
+
+pkgname = ps5-payload-fontconfig
