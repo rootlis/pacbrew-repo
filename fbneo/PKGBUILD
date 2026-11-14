@@ -1,5 +1,5 @@
 pkgname=ps5-payload-fbneo
-pkgver=git
+pkgver=r13709.ab9ea4d
 pkgrel=1
 pkgdesc="FinalBurn Neo"
 arch=('any')

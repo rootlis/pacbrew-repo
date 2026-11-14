@@ -1,0 +1,25 @@
+pkgbase = ps5-payload-fbneo
+	pkgdesc = FinalBurn Neo
+	pkgver = r13709.ab9ea4d
+	pkgrel = 1
+	url = https://github.com/ps5-payload-dev/FBNeo
+	arch = any
+	groups = ps5-payload-dev
+	groups = ps5-payload-game
+	license = custom
+	makedepends = ps5-payload-sdk
+	makedepends = ps5-payload-sdl2
+	makedepends = ps5-payload-sdl2_image
+	makedepends = ps5-payload-libcxx
+	makedepends = ps5-payload-openlibm
+	makedepends = git
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = git+https://github.com/ps5-payload-dev/FBNeo.git#branch=ps5
+	sha256sums = SKIP
+
+pkgname = ps5-payload-fbneo
