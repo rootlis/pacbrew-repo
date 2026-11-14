@@ -1,0 +1,19 @@
+pkgbase = ps5-payload-libnatpmp
+	pkgdesc = A portable and fully compliant implementation of the NAT-PMP protocol
+	pkgver = 20230423
+	pkgrel = 1
+	url = http://miniupnp.free.fr/libnatpmp.html
+	arch = any
+	groups = ps5-payload-dev
+	license = BSD
+	makedepends = ps5-payload-sdk
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://miniupnp.tuxfamily.org/files/libnatpmp-20230423.tar.gz
+	sha256sums = 0684ed2c8406437e7519a1bd20ea83780db871b3a3a5d752311ba3e889dbfc70
+
+pkgname = ps5-payload-libnatpmp
