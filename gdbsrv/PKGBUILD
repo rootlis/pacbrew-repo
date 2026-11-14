@@ -1,5 +1,5 @@
 pkgname=ps5-payload-gdbsrv
-pkgver=git
+pkgver=0.8.r0.g7d36409
 pkgrel=1
 pkgdesc="A GDB server to PS5 payloads"
 arch=('any')

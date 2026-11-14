@@ -1,0 +1,21 @@
+pkgbase = ps5-payload-gdbsrv
+	pkgdesc = A GDB server to PS5 payloads
+	pkgver = 0.8.r0.g7d36409
+	pkgrel = 1
+	url = https://github.com/ps5-payload-dev/gdbsrv
+	arch = any
+	groups = ps5-payload-dev
+	groups = ps5-payload-daemon
+	license = GPLv3
+	makedepends = ps5-payload-sdk
+	makedepends = git
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = git+https://github.com/ps5-payload-dev/gdbsrv.git
+	sha256sums = SKIP
+
+pkgname = ps5-payload-gdbsrv
