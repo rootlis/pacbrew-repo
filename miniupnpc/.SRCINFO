@@ -1,0 +1,19 @@
+pkgbase = ps5-payload-miniupnpc
+	pkgdesc = Small UPnP client library/tool to access Internet Gateway Devices
+	pkgver = 2.2.4
+	pkgrel = 1
+	url = https://miniupnp.tuxfamily.org/
+	arch = any
+	groups = ps5-payload-dev
+	license = BSD
+	makedepends = ps5-payload-sdk
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://miniupnp.tuxfamily.org/files/miniupnpc-2.2.4.tar.gz
+	sha256sums = SKIP
+
+pkgname = ps5-payload-miniupnpc
