@@ -1,0 +1,19 @@
+pkgbase = ps5-payload-mpg123
+	pkgdesc = Console based real time MPEG Audio Player for Layer 1, 2 and 3
+	pkgver = 1.32.7
+	pkgrel = 1
+	url = https://mpg123.de
+	arch = any
+	groups = ps5-payload-dev
+	license = LGPL2.1
+	makedepends = ps5-payload-sdk
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://downloads.sourceforge.net/sourceforge/mpg123/mpg123-1.32.7.tar.bz2
+	sha256sums = 3c8919243707951cac0e3c39bbf28653bcaffc43c98ff16801a27350db8f0f21
+
+pkgname = ps5-payload-mpg123
