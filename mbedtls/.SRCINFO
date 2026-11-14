@@ -1,0 +1,20 @@
+pkgbase = ps5-payload-mbedtls
+	pkgdesc = An open source, portable, easy to use, readable and flexible SSL library
+	pkgver = 3.6.4
+	pkgrel = 1
+	url = https://tls.mbed.org
+	arch = any
+	groups = ps5-payload-dev
+	license = Apache2
+	makedepends = ps5-payload-sdk
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	makedepends = cmake
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://github.com/Mbed-TLS/mbedtls/releases/download/mbedtls-3.6.4/mbedtls-3.6.4.tar.bz2
+	sha256sums = ec35b18a6c593cf98c3e30db8b98ff93e8940a8c4e690e66b41dfc011d678110
+
+pkgname = ps5-payload-mbedtls
