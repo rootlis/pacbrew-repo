@@ -1,0 +1,21 @@
+pkgbase = ps5-payload-klogsrv
+	pkgdesc = A socket server for /dev/klog
+	pkgver = 0.8.r0.gc1b64bd
+	pkgrel = 1
+	url = https://github.com/ps5-payload-dev/klogsrv
+	arch = any
+	groups = ps5-payload-dev
+	groups = ps5-payload-daemon
+	license = GPLv3
+	makedepends = ps5-payload-sdk
+	makedepends = git
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = git+https://github.com/ps5-payload-dev/klogsrv.git
+	sha256sums = SKIP
+
+pkgname = ps5-payload-klogsrv
