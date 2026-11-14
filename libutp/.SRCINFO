@@ -1,0 +1,22 @@
+pkgbase = ps5-payload-libutp
+	pkgdesc = uTorrent Transport Protocol library
+	pkgver = r207.490874c
+	pkgrel = 1
+	url = https://github.com/bittorrent/libutp
+	arch = any
+	groups = ps5-payload-dev
+	license = custom:Public Domain
+	makedepends = ps5-payload-sdk
+	makedepends = ps5-payload-libcxx
+	makedepends = git
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	makedepends = cmake
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = git+https://github.com/transmission/libutp.git
+	sha256sums = SKIP
+
+pkgname = ps5-payload-libutp
