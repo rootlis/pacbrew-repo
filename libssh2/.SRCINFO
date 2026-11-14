@@ -1,0 +1,21 @@
+pkgbase = ps5-payload-libssh2
+	pkgdesc = A library implementing the SSH2 protocol as defined by Internet Drafts
+	pkgver = 1.11.1
+	pkgrel = 1
+	url = https://www.libssh2.org/
+	arch = any
+	groups = ps5-payload-dev
+	license = BSD
+	makedepends = ps5-payload-sdk
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	depends = ps5-payload-openssl
+	depends = ps5-payload-zlib
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://www.libssh2.org/download/libssh2-1.11.1.tar.gz
+	sha256sums = d9ec76cbe34db98eec3539fe2c899d26b0c837cb3eb466a56b0f109cabf658f7
+
+pkgname = ps5-payload-libssh2
