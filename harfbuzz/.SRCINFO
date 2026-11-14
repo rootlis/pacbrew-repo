@@ -1,0 +1,23 @@
+pkgbase = ps5-payload-harfbuzz
+	pkgdesc = OpenType text shaping engine
+	pkgver = 9.0.0
+	pkgrel = 1
+	url = https://harfbuzz.github.io/
+	arch = any
+	groups = ps5-payload-dev
+	license = MIT
+	makedepends = ps5-payload-sdk
+	makedepends = ps5-payload-libcxx
+	makedepends = meson
+	makedepends = git
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	depends = ps5-payload-freetype
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://github.com/harfbuzz/harfbuzz/releases/download/9.0.0/harfbuzz-9.0.0.tar.xz
+	sha256sums = a41b272ceeb920c57263ec851604542d9ec85ee3030506d94662067c7b6ab89e
+
+pkgname = ps5-payload-harfbuzz
