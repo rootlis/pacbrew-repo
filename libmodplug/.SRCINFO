@@ -1,0 +1,20 @@
+pkgbase = ps5-payload-libmodplug
+	pkgdesc = A MOD playing library
+	pkgver = 0.8.9.0
+	pkgrel = 0
+	url = http://modplug-xmms.sourceforge.net
+	arch = any
+	groups = ps5-payload-dev
+	license = LicenseRef-PublicDomain
+	makedepends = ps5-payload-sdk
+	makedepends = ps5-payload-libcxx
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://downloads.sourceforge.net/modplug-xmms/libmodplug-0.8.9.0.tar.gz
+	sha256sums = 457ca5a6c179656d66c01505c0d95fafaead4329b9dbaa0f997d00a3508ad9de
+
+pkgname = ps5-payload-libmodplug
