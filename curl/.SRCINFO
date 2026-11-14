@@ -1,0 +1,22 @@
+pkgbase = ps5-payload-curl
+	pkgdesc = An URL retrieval utility and library
+	pkgver = 8.18.0
+	pkgrel = 1
+	url = https://curl.haxx.se
+	arch = any
+	groups = ps5-payload-dev
+	license = curl
+	makedepends = ps5-payload-sdk
+	makedepends = ps5-payload-libpsl
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	depends = ps5-payload-zlib
+	depends = ps5-payload-openssl
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://curl.haxx.se/download/curl-8.18.0.tar.xz
+	sha256sums = 40df79166e74aa20149365e11ee4c798a46ad57c34e4f68fd13100e2c9a91946
+
+pkgname = ps5-payload-curl
