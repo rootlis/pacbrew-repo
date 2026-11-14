@@ -1,0 +1,19 @@
+pkgbase = ps5-payload-libiconv
+	pkgdesc = GNU charset conversion library
+	pkgver = 1.17
+	pkgrel = 1
+	url = http://www.gnu.org/software/libiconv/
+	arch = any
+	groups = ps5-payload-dev
+	license = LGPL
+	makedepends = ps5-payload-sdk
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.17.tar.gz
+	sha256sums = 8f74213b56238c85a50a5329f77e06198771e70dd9a739779f4c02f65d971313
+
+pkgname = ps5-payload-libiconv
