@@ -1,0 +1,21 @@
+pkgbase = ps5-payload-ftpsrv
+	pkgdesc = An FTP server for jailbroken PS5s that accepts connections on port 2121
+	pkgver = 0.22.r0.g92072f2
+	pkgrel = 1
+	url = https://github.com/ps5-payload-dev/ftpsrv
+	arch = any
+	groups = ps5-payload-dev
+	groups = ps5-payload-daemon
+	license = GPLv3
+	makedepends = ps5-payload-sdk
+	makedepends = git
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = git+https://github.com/ps5-payload-dev/ftpsrv.git
+	sha256sums = SKIP
+
+pkgname = ps5-payload-ftpsrv
