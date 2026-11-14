@@ -1,0 +1,23 @@
+pkgbase = ps5-payload-libarchive
+	pkgdesc = library that can create and read several streaming archive format
+	pkgver = 3.7.4
+	pkgrel = 1
+	url = https://www.libarchive.org
+	arch = any
+	groups = ps5-payload-dev
+	license = Simplified BSD
+	makedepends = ps5-payload-sdk
+	makedepends = ps5-payload-bzip2
+	makedepends = ps5-payload-zlib
+	makedepends = ps5-payload-zstd
+	makedepends = ps5-payload-xz
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = http://www.libarchive.org/downloads/libarchive-3.7.4.tar.gz
+	sha256sums = 7875d49596286055b52439ed42f044bd8ad426aa4cc5aabd96bfe7abb971d5e8
+
+pkgname = ps5-payload-libarchive
