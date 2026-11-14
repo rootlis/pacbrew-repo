@@ -1,0 +1,22 @@
+pkgbase = ps5-payload-libvpx
+	pkgdesc = VP8 and VP9 codec
+	pkgver = 1.14.1
+	pkgrel = 1
+	url = https://www.webmproject.org/
+	arch = any
+	groups = ps5-payload-dev
+	license = custom:BSD
+	makedepends = ps5-payload-sdk
+	makedepends = ps5-payload-libcxx
+	makedepends = ps5-payload-openlibm
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	makedepends = yasm
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://chromium.googlesource.com/webm/libvpx/+archive/v1.14.1.tar.gz
+	sha256sums = SKIP
+
+pkgname = ps5-payload-libvpx
