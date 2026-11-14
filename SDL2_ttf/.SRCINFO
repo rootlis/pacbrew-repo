@@ -1,0 +1,23 @@
+pkgbase = ps5-payload-sdl2_ttf
+	pkgdesc = SDL2 TrueType font library.
+	pkgver = 2.22.0
+	pkgrel = 1
+	url = https://libsdl.org/projects/SDL_ttf
+	arch = any
+	groups = ps5-payload-dev
+	license = zlib
+	makedepends = ps5-payload-sdk
+	makedepends = ps5-payload-openlibm
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	depends = ps5-payload-sdl2
+	depends = ps5-payload-freetype
+	depends = ps5-payload-harfbuzz
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://libsdl.org/projects/SDL_ttf/release/SDL2_ttf-2.22.0.tar.gz
+	sha256sums = d48cbd1ce475b9e178206bf3b72d56b66d84d44f64ac05803328396234d67723
+
+pkgname = ps5-payload-sdl2_ttf
