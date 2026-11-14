@@ -1,0 +1,22 @@
+pkgbase = ps5-payload-elfldr
+	pkgdesc = An ELF loader for jailbroken PS5s
+	pkgver = 0.27.r0.g2a8da00
+	pkgrel = 1
+	url = https://github.com/ps5-payload-dev/elfldr
+	arch = any
+	groups = ps5-payload-dev
+	groups = ps5-payload-daemon
+	license = GPLv3
+	makedepends = ps5-payload-sdk
+	makedepends = git
+	makedepends = xxd
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = git+https://github.com/ps5-payload-dev/elfldr.git
+	sha256sums = SKIP
+
+pkgname = ps5-payload-elfldr

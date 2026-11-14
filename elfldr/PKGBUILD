@@ -1,5 +1,5 @@
 pkgname=ps5-payload-elfldr
-pkgver=git
+pkgver=0.27.r0.g2a8da00
 pkgrel=1
 pkgdesc="An ELF loader for jailbroken PS5s"
 arch=('any')
