@@ -1,5 +1,5 @@
 pkgname=ps5-payload-libx264
-pkgver=stable
+pkgver=0.165.r3222.b35605a
 pkgrel=1
 pkgdesc='Open Source H264/AVC video encoder'
 arch=('any')

@@ -1,0 +1,22 @@
+pkgbase = ps5-payload-libx264
+	pkgdesc = Open Source H264/AVC video encoder
+	pkgver = 0.165.r3222.b35605a
+	pkgrel = 1
+	url = https://www.videolan.org/developers/x264.html
+	arch = any
+	groups = ps5-payload-dev
+	license = GPL-2.0-only
+	makedepends = ps5-payload-sdk
+	makedepends = ps5-payload-openlibm
+	makedepends = git
+	makedepends = nasm
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = git+https://code.videolan.org/videolan/x264.git#branch=stable
+	sha256sums = SKIP
+
+pkgname = ps5-payload-libx264
