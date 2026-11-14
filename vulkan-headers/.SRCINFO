@@ -1,0 +1,22 @@
+pkgbase = ps5-payload-vulkan-headers
+	pkgdesc = Vulkan header files and API registry
+	pkgver = 1.4.354
+	pkgrel = 1
+	url = https://github.com/KhronosGroup/Vulkan-Headers
+	arch = any
+	groups = ps5-payload-dev
+	groups = ps5-payload-gl
+	license = Apache-2.0 OR MIT
+	makedepends = ps5-payload-sdk
+	makedepends = ps5-payload-libcxx
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	makedepends = cmake
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://github.com/KhronosGroup/Vulkan-Headers/archive/refs/tags/v1.4.354.tar.gz
+	sha256sums = 4ca3606e57728febf8aef097c9d7ba6c52385955bb4a6dc06fcf9fc3d76541de
+
+pkgname = ps5-payload-vulkan-headers
