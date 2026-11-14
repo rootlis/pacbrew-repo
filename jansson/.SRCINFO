@@ -1,0 +1,19 @@
+pkgbase = ps5-payload-jansson
+	pkgdesc = C library for encoding, decoding and manipulating JSON data
+	pkgver = 2.14
+	pkgrel = 1
+	url = https://www.digip.org/jansson/
+	arch = any
+	groups = ps5-payload-dev
+	license = MIT
+	makedepends = ps5-payload-sdk
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://github.com/akheron/jansson/releases/download/v2.14/jansson-2.14.tar.gz
+	sha256sums = 5798d010e41cf8d76b66236cfb2f2543c8d082181d16bc3085ab49538d4b9929
+
+pkgname = ps5-payload-jansson
