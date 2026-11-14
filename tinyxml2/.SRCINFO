@@ -1,0 +1,22 @@
+pkgbase = ps5-payload-tinyxml2
+	pkgdesc = A simple, small, efficient, C++ XML parser that can be easily integrated into other programs
+	pkgver = 10.0.0
+	pkgrel = 1
+	url = http://leethomason.github.io/tinyxml2/
+	arch = any
+	groups = ps5-payload-dev
+	license = apache
+	makedepends = ps5-payload-sdk
+	makedepends = ps5-payload-libcxx
+	makedepends = git
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	makedepends = cmake
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://github.com/leethomason/tinyxml2/archive/10.0.0.tar.gz
+	sha256sums = 3bdf15128ba16686e69bce256cc468e76c7b94ff2c7f391cc5ec09e40bff3839
+
+pkgname = ps5-payload-tinyxml2
