@@ -1,0 +1,21 @@
+pkgbase = ps5-payload-sdl2_gfx
+	pkgdesc = SDL graphics drawing primitives and other support functions (Version 2)
+	pkgver = 1.0.4
+	pkgrel = 1
+	url = http://www.ferzkopp.net/wordpress/2016/01/02/sdl_gfx-sdl2_gfx/
+	arch = any
+	groups = ps5-payload-dev
+	groups = ps5-payload-sdl2
+	license = zlib
+	makedepends = ps5-payload-sdk
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	depends = ps5-payload-sdl2
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = https://www.ferzkopp.net/Software/SDL2_gfx/SDL2_gfx-1.0.4.tar.gz
+	sha256sums = 63e0e01addedc9df2f85b93a248f06e8a04affa014a835c2ea34bfe34e576262
+
+pkgname = ps5-payload-sdl2_gfx
